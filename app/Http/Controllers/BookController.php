@@ -17,4 +17,15 @@ class BookController extends Controller
         $books = $res['data'];
         return view('book.index', ['books' => $books]);
     }
+
+    public function show($id)
+    {
+        $res = HttpClient::fetch(
+            'GET',
+            'http://127.0.0.1:8000/api/book/' . $id
+        );
+
+        $book = $res['data'];
+        return view('book.detail', ['book' => $book]);
+    }
 }
