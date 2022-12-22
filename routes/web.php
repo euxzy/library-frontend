@@ -19,8 +19,9 @@ Route::get('/', function () {
 });
 
 Route::prefix('/books')
+    ->name('books.')
     ->controller(BookController::class)
     ->group(function () {
-        Route::get('/', 'index');
-        Route::get('/{id}', 'show');
+        Route::get('/', 'index')->name('home');
+        Route::get('/{id}', 'show')->name('detail');
     });
