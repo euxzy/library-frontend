@@ -1,7 +1,7 @@
 @extends('templates.main')
 @section('title', 'Daftar Buku')
 @section('content')
-  <section>
+  <section class="mt-5">
     <div class="container py-5">
       @foreach ($books as $book)
         <div class="row justify-content-center mb-3">
