@@ -29,6 +29,11 @@ class BookController extends Controller
         return view('book.detail', ['book' => $book]);
     }
 
+    public function create()
+    {
+        return view('book.add');
+    }
+
     public function edit($id)
     {
         $res = HttpClient::fetch(

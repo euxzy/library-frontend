@@ -23,6 +23,7 @@ Route::prefix('/books')
     ->controller(BookController::class)
     ->group(function () {
         Route::get('/', 'index')->name('home');
+        Route::get('/add', 'create')->name('add');
         Route::get('/{id}', 'show')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
     });
