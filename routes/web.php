@@ -26,4 +26,6 @@ Route::prefix('/books')
         Route::get('/add', 'create')->name('add');
         Route::get('/{id}', 'show')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
+
+        Route::post('/create', 'store')->name('store');
     });

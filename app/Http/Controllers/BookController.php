@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\HttpClient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class BookController extends Controller
 {
@@ -32,6 +33,23 @@ class BookController extends Controller
     public function create()
     {
         return view('book.add');
+    }
+
+    public function store(Request $request)
+    {
+        $files = [];
+        if ($request->hasFile('photo')) {
+            $files['photo'] = $request->file('photo');
+        }
+
+        HttpClient::fetch(
+            'POST',
+            'http://127.0.0.1:8000/api/book/create',
+            $request->all(),
+            $files
+        );
+
+        return redirect()->back();
     }
 
     public function edit($id)
