@@ -62,4 +62,21 @@ class BookController extends Controller
         $book = $res['data'];
         return view('book.edit', ['book' => $book]);
     }
+
+    public function update(Request $request, $id)
+    {
+        $files = [];
+        if ($request->hasFile('photo')) {
+            $files['photo'] = $request->file('photo');
+        }
+
+        HttpClient::fetch(
+            'POST',
+            'http://127.0.0.1:8000/api/book/update/' . $id,
+            $request->all(),
+            $files
+        );
+
+        return redirect()->back();
+    }
 }

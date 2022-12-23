@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title', 'Edit Detail Buku')
+@section('title', 'Tambah Buku')
 @section('content')
   <section class="my-5 py-5">
     <form action="{{ route('books.store') }}" method="POST" enctype="multipart/form-data">
