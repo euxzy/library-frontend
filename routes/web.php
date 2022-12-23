@@ -24,4 +24,5 @@ Route::prefix('/books')
     ->group(function () {
         Route::get('/', 'index')->name('home');
         Route::get('/{id}', 'show')->name('detail');
+        Route::get('/edit/{id}', 'edit')->name('edit');
     });

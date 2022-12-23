@@ -28,4 +28,15 @@ class BookController extends Controller
         $book = $res['data'];
         return view('book.detail', ['book' => $book]);
     }
+
+    public function edit($id)
+    {
+        $res = HttpClient::fetch(
+            'GET',
+            'http://127.0.0.1:8000/api/book/' . $id
+        );
+
+        $book = $res['data'];
+        return view('book.edit', ['book' => $book]);
+    }
 }
