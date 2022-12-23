@@ -26,8 +26,8 @@
                       <span>{{ $book['author']['name'] }}</span>
                     </div>
                     <div class="mt-1 mb-0 text-muted small">{{ $book['publisher'] }}</div>
-                    <p class="text-truncate mb-4 mb-md-0">
-                      {{ $book['sinopsis'] }}
+                    <p class="mb-4 mb-md-0">
+                      {{ $book['description'] }}
                     </p>
                   </div>
                   <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #dde;">
   <div class="container">
     <a class="navbar-brand" href="">Book</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
