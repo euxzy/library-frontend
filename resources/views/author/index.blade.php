@@ -11,7 +11,7 @@
     </div>
     <div class="row">
       @foreach ($authors as $author)
-        <div class="card" style="width: 18rem;">
+        <div class="card mx-auto my-3" style="width: 18rem;">
           <img src="{{ $author['photo'] }}" class="card-img-top" alt="{{ $author['name'] }}">
           <div class="card-body">
             <h5 class="card-title">{{ $author['name'] }}</h5>
