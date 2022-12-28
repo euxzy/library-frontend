@@ -4,9 +4,8 @@
   <div class="container my-5 py-5">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-8 col-lg-6">
-        <div class="text-center" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-          <h3>Our Creative <span> Team</span></h3>
-          <p>Appland is completely creative, lightweight, clean &amp; super responsive app landing page.</p>
+        <div class="text-center">
+          <h3>Daftar Penulis</h3>
         </div>
       </div>
     </div>
