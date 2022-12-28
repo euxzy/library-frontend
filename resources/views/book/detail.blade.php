@@ -2,12 +2,13 @@
 @section('title', $book['name'])
 @section('content')
   <section class="my-5 py-5" style="background-color: #f4f5f7;">
-    <div class="container py-5 h-100">
+    <div class="h-100 container py-5">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="col col-lg-6 mb-lg-0 mb-4">
           <div class="card mb-3" style="border-radius: .5rem;">
             <div class="row g-0 pt-3">
-              <div class="col-md-4 gradient-custom text-center p-3" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <div class="col-md-4 gradient-custom p-3 text-center"
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                 <img src="{{ $book['photo'] }}" alt="{{ $book['name'] }}" class="img-fluid my-5" />
                 <h5>{{ $book['name'] }}</h5>
                 <p>{{ $book['author']['name'] }}</p>
@@ -55,8 +56,8 @@
 
                   <hr class="mt-0 mb-4">
                   <div class="d-flex">
-                    <p class="text-muted">Edit</p>
-                    <p class="text-muted mx-3">Hapus</p>
+                    <a href="{{ route('books.edit', $book['id']) }}" class="btn btn-outline-info">Edit</a>
+                    <a href="#" class="btn btn-outline-danger mx-3">Hapus</a>
                   </div>
                 </div>
               </div>
