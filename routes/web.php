@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +30,11 @@ Route::prefix('/books')
 
         Route::post('/create', 'store')->name('store');
         Route::post('/update/{id}', 'update')->name('update');
+    });
+
+Route::prefix('/penulis')
+    ->name('authors.')
+    ->controller(AuthorController::class)
+    ->group(function () {
+        Route::get('/', 'index')->name('home');
     });
